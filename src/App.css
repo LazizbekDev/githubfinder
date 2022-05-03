@@ -1,38 +1,85 @@
-.App {
-  text-align: center;
+.about__icon {
+    position: relative;
+    display: flex;
+    transform-style: preserve-3d;
+    transform: rotate(-25deg) skew(25deg);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.about__icon--item {
+    position: relative;
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
+    border-radius: 15px;
+    box-shadow: -9px 8px 8px black,
+        inset -10px 10px 18px #777;
+    background: #666;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.about__icon--item a span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #aaa;
+    color: white;
+    border-radius: 15px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.about__icon--item a svg {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    color: #2A303C;
+    transform: translate(-50%, -50%);
 }
 
-.App-link {
-  color: #61dafb;
+.about__icon--item:hover a svg {
+    z-index: 1000;
+    color: white;
+    transition: .3s;
+    transform: translate(65%, -170%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.about__icon--item:hover a span {
+    z-index: 999;
+    transition: .3s;
+    box-shadow: -1px 1px 1px rgba(0,0,0, 0.05);
+}
+
+.about__icon--item:hover a span:nth-child(4) {
+    transform: translate(40px, -40px);
+    opacity: 1;
+}
+
+.about__icon--item:hover a span:nth-child(3) {
+    transform: translate(30px, -30px);
+    opacity: .8;
+}
+
+.about__icon--item:hover a span:nth-child(2) {
+    transform: translate(20px, -20px);
+    opacity: .6;
+}
+
+.about__icon--item:hover a span:nth-child(1) {
+    transform: translate(10px, -10px);
+    opacity: .4;
+}
+
+.about__icon--item:nth-child(1):hover a span {
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
+}
+
+.about__icon--item:nth-child(2):hover a svg {
+    color: #0088cc;
+}
+
+.about__icon--item:nth-child(2):hover a span {
+    background: white;
 }
