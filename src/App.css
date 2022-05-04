@@ -1,3 +1,5 @@
+.custom-card-image, .card.image-full::before {border-radius: .5rem;}
+/* svg {color: #DCA54C;} */
 .about__icon {
     position: relative;
     display: flex;

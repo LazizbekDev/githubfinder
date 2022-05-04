@@ -6,25 +6,30 @@ import About from './pages/About'
 import NotFound from './pages/NotFound'
 import './app.css'
 import { GithubProvider } from './context/GithubContext';
+import { AlertProvider } from './context/AlertContext';
+import User from './pages/User';
 
 function App() {
   return (
     <GithubProvider>
-      <Router>
-        <div className="flex flex-col justify-between h-screen">
-          <Navbar />
+      <AlertProvider>
+        <Router>
+          <div className="flex flex-col justify-between h-screen">
+            <Navbar />
 
-          <main className='container px-3 mx-auto pb-12'>
-            <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/about' element={<About />} />
-              <Route path='*' element={<NotFound />} />
-            </Routes>
-          </main>
+            <main className='container px-3 mx-auto pb-12'>
+              <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/about' element={<About />} />
+                <Route path='/user/:login' element={<User />} />
+                <Route path='*' element={<NotFound />} />
+              </Routes>
+            </main>
 
-          <Footer />
-        </div>
-      </Router>
+            <Footer />
+          </div>
+        </Router>
+      </AlertProvider>
     </GithubProvider>
   );
 }
