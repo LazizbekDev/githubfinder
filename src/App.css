@@ -7,6 +7,25 @@
     transform: rotate(-25deg) skew(25deg);
 }
 
+.info {
+    margin-top: -90px;
+    transform-style: preserve-3d;
+    transform: rotate(-25deg) skew(25deg);
+    text-shadow: -1px 2px 0px rgb(166, 170, 157);
+    color: #aaa;
+}
+
+@media only screen and (max-width: 343px) {
+    .about__icon, .info {
+        transform: rotate(-65deg) skew(0);
+    }
+
+    .info {
+        margin-left: -50%;
+        text-shadow: -2px 2px 1px rgb(102, 100, 100);
+    }
+}
+
 .about__icon--item {
     position: relative;
     list-style: none;
@@ -84,4 +103,8 @@
 
 .about__icon--item:nth-child(2):hover a span {
     background: white;
+}
+
+.about__icon--item:nth-child(3):hover a span {
+    background: #0e76a8;
 }
