@@ -4,10 +4,10 @@ import Footer from './components/layout/Footer';
 import Home from './pages/Home'
 import About from './pages/About'
 import NotFound from './pages/NotFound'
-import './app.css'
 import { GithubProvider } from './context/GithubContext';
 import { AlertProvider } from './context/AlertContext';
 import User from './pages/User';
+import './app.css'
 
 function App() {
   return (
