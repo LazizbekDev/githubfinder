@@ -7,7 +7,7 @@ import NotFound from './pages/NotFound'
 import { GithubProvider } from './context/GithubContext';
 import { AlertProvider } from './context/AlertContext';
 import User from './pages/User';
-import './app.css'
+import './App.css'
 
 function App() {
   return (
